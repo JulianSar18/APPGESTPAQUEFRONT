@@ -1,0 +1,9 @@
+<p-toast></p-toast>
+<div class="inventory">    
+    <input pInputText id="Categoria" [(ngModel)]="category" type="text" placeholder="Categoria"/>
+    <p-dropdown [options]="zones" [(ngModel)]="selectedZone" optionLabel="zone_name" placeholder="Seleccione una Zona"></p-dropdown>
+    <div class="button">
+        <p-fileUpload mode="basic" chooseLabel="Registro Masivo" name="myfile[]" url="https://www.primefaces.org/cdn/api/upload.php" accept=".xls"  (onUpload)="uploadFile($event)" [disabled]="disable"></p-fileUpload>
+        <button pButton pRipple label="Añadir" class="p-button-success" (click)="addInventory()" [disabled]="disable"></button>
+    </div>
+</div>

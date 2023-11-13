@@ -1,0 +1,22 @@
+<div id="driver">
+    <section>
+        <app-header-page [usuario]="user"></app-header-page>
+    </section>
+    <section class="cards">
+        <div class="container">
+            <div class="card" (click)="CheckDeliveryC()">
+                <p-card header="Entrega">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="../../assets/entry.jpg" />
+                    </ng-template>
+                    <p>
+                        Registrar Entrega de paquetes
+                    </p>
+                </p-card>
+            </div>
+        </div>        
+    </section>
+    <section>
+        <app-summary-trip [driver]="identification"></app-summary-trip>
+    </section>
+</div>

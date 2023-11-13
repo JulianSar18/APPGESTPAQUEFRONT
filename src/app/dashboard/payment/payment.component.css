@@ -1,0 +1,47 @@
+:host{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #E4E0E0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#payment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.containerCommission{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.commission{
+    display: flex;
+    flex-direction: column;   
+    gap: 20px;     
+   }
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container-table{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tablePayment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pagination {
+    max-width: 50rem;
+}
+

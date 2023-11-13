@@ -1,0 +1,11 @@
+.container-table{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tableSummary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+}

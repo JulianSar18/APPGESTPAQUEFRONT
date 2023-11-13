@@ -1,0 +1,14 @@
+<p-toast></p-toast>
+<div class="formDriver">        
+    <div class="field">
+        <label htmlFor="CC">Conductor</label>
+        <p-dropdown id="CC" [options]="drivers" appendTo="body" [(ngModel)]="selectedIdentification" optionLabel="identification_card" [filter]="true" filterBy="identification_card"placeholder="Conductor" [style]="{'width':'545px'}"></p-dropdown>
+    </div>
+    <div class="field">
+        <label htmlFor="Plate">Placa</label>
+        <p-dropdown id="Plate" [options]="licensePlates" appendTo="body" [(ngModel)]="selectVehicle" optionLabel="license_plate" [filter]="true" filterBy="license_plate"placeholder="Placa vehiculo" [style]="{'width':'545px'}" (onClick)="getLicensePlate()"></p-dropdown>
+    </div>     
+    <div class="action">
+        <button pButton pRipple label="Ingresar" class="p-button-success" (click)="entryVehicle()" [disabled]="disable"></button>        
+    </div>       
+</div>

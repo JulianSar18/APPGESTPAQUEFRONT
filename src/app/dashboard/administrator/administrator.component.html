@@ -1,0 +1,42 @@
+<div id="admin">
+    <section>
+        <app-header-page [usuario]="user"></app-header-page>
+    </section>
+    <section class="cards">
+        <div class="container">
+            <div class="card" (click)="addPackage()">
+                <p-card header="Inventario">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="../../assets/inventory.png" />
+                    </ng-template>
+                    <p>
+                        Carga el inventario para crear tu programacion semanal
+                    </p>
+                </p-card>
+            </div>
+            <div class="card" (click)="addContractor()">
+                <p-card header="Contratistas">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="../../assets/contractors.jpg" />
+                    </ng-template>
+                    <p>
+                        Añade o actualiza los conductores y empresas
+                    </p>
+                </p-card>
+            </div>
+            <div class="card" (click)="goPayment()">
+                <p-card header="Pagos">
+                    <ng-template pTemplate="header">
+                        <img alt="Card" src="../../assets/payments.jpg" />
+                    </ng-template>
+                    <p>
+                        Configura los pagos de tus flotas contratadas
+                    </p>
+                </p-card>
+            </div>
+        </div>        
+    </section>
+    <section>
+        <app-summary-trip></app-summary-trip>      
+    </section>
+</div>

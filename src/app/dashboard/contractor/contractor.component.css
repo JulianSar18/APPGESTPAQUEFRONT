@@ -1,0 +1,38 @@
+.containerContractor{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.formCompany{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    gap: 10px;    
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button{
+    margin-top: 30px;
+}
+
+.formDriver{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formDriver div{
+    list-style: none;
+    flex: 0 0 40%;
+    margin: 10px;
+}
+
+.action{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+}

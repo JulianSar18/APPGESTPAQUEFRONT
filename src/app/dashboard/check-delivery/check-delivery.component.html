@@ -1,0 +1,14 @@
+<p-toast></p-toast>
+<div class="delivery">
+    <label htmlFor="CC">Cedula Conductor</label>
+    <input pInputText id="CC" type="text" [disabled]="true" [(ngModel)]="identification" />
+    <label htmlFor="license_plate">Placa Vehiculo</label>
+    <input pInputText id="license_plate" type="text" [disabled]="true" [(ngModel)]="vehiclePackages!.license_plate" />
+    <label htmlFor="packages">{{vehiclePackages!.name_trip}}</label>
+    <p-dropdown id="packages" appendTo="body" [options]="vehiclePackages!.packages" [(ngModel)]="selectPackage"
+        optionLabel="name" [filter]="true" filterBy="name" placeholder="Paquetes en el viaje"
+        [style]="{'width':'400px'}"></p-dropdown>
+    <div class="button">
+        <button pButton pRipple label="Entregado" (click)="checkDelivery()" [disabled]="selectPackage === undefined || disable" class="p-button-success"></button>
+    </div>
+</div>

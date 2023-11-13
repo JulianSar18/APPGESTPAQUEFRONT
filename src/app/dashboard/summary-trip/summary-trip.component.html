@@ -1,0 +1,47 @@
+<div class="container-table">
+    <div class="tableSummary">
+        <p-table [tableStyle]="{'min-width': '50rem'}" [value]="trips" stateStorage="session" stateKey="statedemo-session">                
+            <ng-template pTemplate="header">
+                <tr>
+                    <th style="width:14%">Viaje No.</th>
+                    <th style="width:14%">Zona</th>
+                    <th style="width:14%">Conductor</th>
+                    <th style="width:14%">Placa</th>
+                    <th style="width:14%">Estado del viaje</th>
+                    <th style="width:26%">Fecha Creacion viaje</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-trip>
+                <tr>
+                    <td>
+                        {{trip.id_trip}}
+                    </td>
+                    <td>
+                        {{trip.zone_name}}
+                    </td>
+                    <td>
+                        {{trip.driver_name}}
+                    </td>
+                    <td>
+                        {{trip.license_plate}}
+                    </td>
+                    <td>
+                        {{trip.status_trip}}
+                    </td>
+                    <td>
+                        {{trip.date_trip}}
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage">
+                <tr>
+                    <td colspan="6">No se encontraron viajes.</td>
+                </tr>
+            </ng-template>
+        </p-table>
+        <p-paginator class="pagination" [showCurrentPageReport]="true"
+                currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} entradas" [rows]="5"
+                [totalRecords]="totalEl" (onPageChange)="onPageChange($event)"></p-paginator> 
+    </div>
+     
+</div> 

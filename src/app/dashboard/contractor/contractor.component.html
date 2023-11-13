@@ -1,0 +1,38 @@
+<div class="containerContractor">
+    <div class="formCompany">
+        <div class="field">
+            <label htmlFor="NE">Nombre Empresa</label>
+            <input pInputText id="NE" [(ngModel)]="companyName" [disabled]="disable"/>
+        </div>
+        <div class="field">
+            <label htmlFor="NIT">NIT</label>
+            <input pInputText id="NIT" [(ngModel)]="nit" [disabled]="disable"/>
+        </div>
+        <div class="button">
+            <button pButton pRipple label="Añadir Empresa" class="p-button-success" (click)="createCompanie()" [disabled]="disable"></button>
+        </div>
+    </div>
+    <div class="formDriver">        
+        <div class="field">
+            <label htmlFor="E">Empresa</label>
+            <p-dropdown id="E"[options]="companies" appendTo="body" [(ngModel)]="selectedCompanie" optionLabel="company_name" [filter]="true" filterBy="company_name"placeholder="Seleccione una empresa" [style]="{'width':'545px'}" [disabled]="disable"></p-dropdown>
+        </div>
+        <div class="field">
+            <label htmlFor="placa">Placa Vehiculo</label>
+            <input pInputText id="placa" [(ngModel)]="licensePlate" [disabled]="disable"/>
+        </div>
+        <div class="field">
+            <label htmlFor="cc">Cedula Conductor</label>
+            <input pInputText id="cc" [(ngModel)]="identification" [disabled]="disable"/>
+        </div>
+        <div class="field">
+            <label htmlFor="NC">Nombre Conductor</label>
+            <input pInputText id="NC" [(ngModel)]="driverName" [disabled]="disable"/>
+        </div>        
+    </div>
+    <div class="action">
+        <p-toast></p-toast>
+        <p-fileUpload mode="basic" chooseLabel="Registro Masivo" name="myfile[]" url="https://www.primefaces.org/cdn/api/upload.php" accept=".xls"  (onUpload)="uploadFile($event)" [disabled]="disable_button"></p-fileUpload>
+        <button pButton pRipple label="Registrar Vehiculo" class="p-button-success" (click)="createVehicleDriver()" [disabled]="disable_button"></button>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    background-color:  white;
+    justify-content: flex-end;
+    height: 85px;
+}
+
+.menu{
+    background-color: #008C44;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+
+.user{
+    margin-left: 60px;
+    background-color: white;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6px;    
+    color: #008C44;
+}
+
+.menu-button{
+    margin-right: 50px;
+    margin-top: 2px;
+}

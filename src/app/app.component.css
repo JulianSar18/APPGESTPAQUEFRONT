@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #008C44;
+    background-size: cover;
+    background-repeat: repeat;
+    overflow: auto;
+   }

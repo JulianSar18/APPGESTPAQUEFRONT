@@ -1,0 +1,15 @@
+.inventory{
+ display: flex;
+ flex-direction: column;   
+ gap: 20px;
+ width: 430px;
+ height:280px;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px;
+    gap: 20px;
+}
+

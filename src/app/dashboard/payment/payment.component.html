@@ -1,0 +1,94 @@
+<div id="payment">
+    <section>
+        <app-header-page [usuario]="user"></app-header-page>
+    </section>
+    <section>
+        <div>
+            <p-button icon="pi pi-arrow-left" severity="warning" (click)="goadministrator()"></p-button>
+        </div>
+        <div class="containerCommission">
+            <p-card header="Configuraciones de pago" subheader="Comisiones" [style]="{ width: '360px' }">
+                <div class="commission">
+                    <p-dropdown [options]="companies" [(ngModel)]="selectedCompanie" optionLabel="company_name"
+                        [filter]="true" filterBy="company_name" placeholder="Seleccione una empresa"
+                        [style]="{'width':'320px'}"></p-dropdown>
+                    <div class="flex-auto">
+                        <label for="perDelivery">Comision por entrega</label>
+                        <p-inputNumber [(ngModel)]="perDelivery" inputId="perDelivery" mode="decimal"
+                            [minFractionDigits]="2" [maxFractionDigits]="5" [style]="{'width':'320px'}">
+                        </p-inputNumber>
+                    </div>
+                    <div class="flex-auto">
+                        <label for="perTrip">Comision por trayecto</label>
+                        <p-inputNumber [(ngModel)]="perTrip" inputId="perTrip" mode="decimal" [minFractionDigits]="2"
+                            [maxFractionDigits]="5" [style]="{'width':'320px'}"> </p-inputNumber>
+                    </div>
+                </div>
+                <ng-template pTemplate="footer">
+                    <button pButton pRipple label="Crear Comision" class="p-button-success"
+                        (click)="addcommisionsToCompany()"></button>
+                </ng-template>
+            </p-card>
+        </div>
+    </section>
+    <section>
+        <div class="container-table">
+            <div class="tablePayment">
+                <p-table [tableStyle]="{'min-width': '50rem'}" [value]="liquidations" stateStorage="session"
+                    stateKey="statedemo-session">
+                    <ng-template pTemplate="caption">
+                        <div class="buttons">
+                            <button type="button" pButton pRipple icon="pi pi-file-pdf" (click)="exportPdf()"
+                                class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
+                            <div>
+                                <p-toast></p-toast>
+                                <p-confirmDialog [style]="{width: '20vw'}"></p-confirmDialog>
+                                <p-button label="Calcular liquidaciones a la fecha" severity="help"
+                                    (click)="confirmDialog()"></p-button>
+                            </div>
+
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th style="width:20%">Empresa</th>
+                            <th style="width:20%">Trayectos</th>
+                            <th style="width:20%">Entregas</th>
+                            <th style="width:20%">Fecha Liquidacion</th>
+                            <th style="width:20%">Valor Total</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-liquidation>
+                        <tr>
+                            <td>
+                                {{liquidation.name_company}}
+                            </td>
+                            <td>
+                                {{liquidation.number_trips}}
+                            </td>
+                            <td>
+                                {{liquidation.number_deliveries}}
+                            </td>
+                            <td>
+                                {{liquidation.date}}
+                            </td>
+                            <td>
+                                {{liquidation.total_value | currency: 'COP '}}
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="emptymessage">
+                        <tr>
+                            <td colspan="5">No customers found.</td>
+                        </tr>
+                    </ng-template>
+                    
+                </p-table>
+                    <p-paginator class="pagination" [showCurrentPageReport]="true"
+                        currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} entradas" [rows]="2"
+                        [totalRecords]="totalRecords" (onPageChange)="onPageChange($event)"></p-paginator>
+            </div>
+        </div>
+    </section>
+</div>
+

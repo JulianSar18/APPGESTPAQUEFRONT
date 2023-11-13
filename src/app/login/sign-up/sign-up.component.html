@@ -1,0 +1,21 @@
+<div class="login">
+    <p-messages class="error" *ngIf="errorFetch" severity="error">
+        <ng-template pTemplate>                
+            <div class="ml-2">Credenciales incorrectas</div>
+        </ng-template>
+    </p-messages> 
+    <div class="container">
+        <div class="login-card">
+            <div>
+                <img src="../../assets/LoginImage.jpg" alt="millo">
+            </div>
+            <div class="input-container">
+                <h1>Centro de Control</h1>
+                <input placeholder="Email" type="text" class="p-inputtext-lg" [(ngModel)] = "inputEmail"/>
+                <input placeholder="Password" type="password" class="p-inputtext-lg" [(ngModel)] = "inputPassword"/>          
+                <button pButton pRipple label="Inicia sesion" class="p-button-success" (click)="signUp()"></button>                       
+            </div>        
+        </div>    
+    </div>
+</div>
+
