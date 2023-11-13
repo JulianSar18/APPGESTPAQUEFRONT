@@ -9,6 +9,6 @@ export class Constants {
     public readonly API_URL_SUMMARY: string = "http://localhost:8081/api/summary";
     public readonly API_URL_TRACKING: string = "http://localhost:8081/api/tracking";
     public readonly API_URL_OPERATIONAL: string = "http://localhost:8081/api/operational";
-    public readonly API_URL_LIQUIDATOR: string = "http://localhost:8081/api/liquidator";
+    public readonly API_URL_LIQUIDATOR: string = "http://localhost:8081/api/liquidation";
 
 }
