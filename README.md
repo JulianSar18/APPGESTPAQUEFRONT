@@ -1,27 +1,55 @@
-# APPGESTPAQUFRONTEND
+# APP_GEST_PAQU_FRONTEND
+## Descripcion
+Este proyecto tiene como finalidad gestionar la entrega de paquetes para la empresa de Transporte S.A.S, podra getionar las empresas que contrata, gestionar la entrada de los vehiculos y la entrega de los paquetes; para finalmente calcular el valor que se debe pagar a cada empresa que haya contratado segun su configuracion de comisiones
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/JulianSar18/APPGESTPAQUEFRONT)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funciones
 
-## Code scaffolding
+- Añadir paquetes manual o por medio de archivo
+- Añadir contratistas y conductores manual o por medio de archivo
+- Crear comisiones a los contratistas
+- Calcular liquidaciones a los viajes completados
+- Ingreso al centro de carga
+- Carga de viajes segun la zona asignada al vehiculo
+- Marcar entregas de paquetes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## TECNOLOGIA
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+el proyecto se encuntra basado en las siguientes herramientas:
 
-## Running unit tests
+- [AngularJS] - framework
+- [PrimeNG](https://primeng.org/) - componentes e iconos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## INSTALACION
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+APP_GEST_PAQU_FRONTEND requiere [Node.js](https://nodejs.org/) v18.17.0 para ejecutarse
 
-## Further help
+Instalar las dependencias
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```sh
+cd Dir
+npm i
+```
+
+
+#### CORRER PROYECTO
+
+Para localHost:
+
+```sh
+npm start
+```
+## MANUAL DE USUARIO
+
+Puedes consultar las instrucciones para usar la aplicacion en [MANUAL DE USUARIO](https://drive.google.com/file/d/1h4Nj8xXIytmpX5fzDNzADWYcozsrH6C-/view?usp=sharing) 
+
+
+## License
+
+MIT
+
+**Free Software**
