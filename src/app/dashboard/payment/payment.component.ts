@@ -66,7 +66,7 @@ export class PaymentComponent implements OnInit {
     })
   }
   onPageChange(event: any) {
-    let current = this.currentPage = event.first + 1;
+    let current = this.currentPage = event.page + 1;
     this.getLiquidations(current);
   }
 
